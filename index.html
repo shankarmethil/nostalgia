@@ -214,7 +214,7 @@
 
     <section id="home" class="hero">
         <h1>Nostalgia 76-77 | SSLC Batch Reunion</h1>
-        <div class="ml-title">നോസ്റ്റാൾജിയ 76-77 | എസ്.എസ്.എൽ.സി ബാച്ച് സംഗമം</div>
+        <div class="ml-title">നോസ്റ്റാൾജിയ 76-77 | എസ്.എസ്.എൽ.സി ബാച്ച് SKMJ High School</div>
         
         <p class="motto">"Connecting together for friendship, social service, and shared joy among all members, without bias or distinction."</p>
         <p class="motto-ml">"എല്ലാ അംഗങ്ങളെയും വലുതോ ചെറുതോ എന്ന വ്യത്യാസമില്ലാതെ, പക്ഷപാതമില്ലാതെ, സൗഹൃദത്തിനും സാമൂഹ്യസേവനത്തിനും പരസ്പര സന്തോഷത്തിനുമായി ഒരുമിച്ച് ബന്ധിപ്പിക്കുക."</p>
@@ -222,7 +222,7 @@
 
     <div class="scrolling-container">
         <div class="scrolling-text">
-            We earnestly solicit your co-operation in all future programs, 
+            We earnestly solicit your co-operation in all future programs. 
             <span class="ml-text">സംഘടനയുടെ എല്ലാ വരുംകാല പരിപാടികളിലും നിങ്ങളുടെ സഹകരണം ഞങ്ങൾ അഭ്യർത്ഥിക്കുന്നു.</span>
         </div>
     </div>
@@ -410,6 +410,15 @@
             var nav = document.getElementById("navLinks");
             nav.classList.toggle("active");
         }
+
+        // This new code automatically closes the mobile menu when any link is clicked
+        var navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                var nav = document.getElementById("navLinks");
+                nav.classList.remove("active");
+            });
+        });
     </script>
 </body>
 </html>
